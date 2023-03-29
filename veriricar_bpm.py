@@ -20,6 +20,7 @@ elif idade > 17 and idade < 60:
         print("O seu batimento está ACIMA do recomendado para sua idade.")
     else:
         print("O seu batimento está no nível recomendado para sua idade")
+
 else:
     if bpm < 50:
         print("O seu batimento está ABAIXO do recomendado para sua idade.")
