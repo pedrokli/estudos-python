@@ -6,7 +6,7 @@ valor_da_compra = float(valor_da_compra)
 cupom = input("Insira o cupom:")
 
 #condição lógica
-if cupom == "NIVER10":
+if cupom.upper() == "NIVER10":
     #descontando os 10%
     valor_final = valor_da_compra * 0.9
 else:
