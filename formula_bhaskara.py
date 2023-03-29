@@ -7,7 +7,7 @@ c = float(input("Insira o valor de C: "))
 #calculo do delta
 delta = b * b - 4 * a * c
 
-
+#condição para saber os valores
 if delta > 0.0:
     #cálculo de 2 valores para o x
     x1 = (-b + math.sqrt(delta)) / 2 * a
