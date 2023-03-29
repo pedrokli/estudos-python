@@ -5,6 +5,9 @@ valor_bruto = float(input("Insira o valor bruto do pacote de viagem: "))
 categoria = input("Insira o nome da categoria do pacote (Economica, executiva ou primeira classe): ")
 numero_pessoas = int(input("Insira no número de pessoas no pacote (Lembrando que o desconto só é válido se as pessoas morarem na mesma casa): "))
 
+#valor final já definido para evitar que o código quebre caso o usuário coloque uma condição que não faça sentido
+valor_final = valor_bruto
+
 #condição da classe economica
 if categoria.upper() == "ECONOMICA":
     if numero_pessoas == 2:
@@ -47,10 +50,12 @@ if categoria.upper() == "PRIMEIRA CLASSE":
     else:
         print("Por favor, insira um valor válido e tente novamente")
 
-#calculo do valor médio por pessoa
-valor_medio = valor_final/numero_pessoas
 
 #mostrando o resultado para o usuário
 print("Valor Bruto: {}".format(valor_bruto))
 print("Valor Líquido: {}".format(valor_final))
-print("Valor médio por pessoa do pacote: {}".format(valor_medio))
+
+#calculo do valor médio por pessoa
+if numero_pessoas > 0:
+    valor_medio = valor_final/numero_pessoas
+    print("Valor médio por pessoa do pacote: {}".format(valor_medio))
