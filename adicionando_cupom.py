@@ -5,9 +5,12 @@ valor_da_compra = float(valor_da_compra)
 #solicitando o cumpo NIVER10
 cupom = input("Insira o cupom:")
 
-#caso o cupom esteja correto, realizará um desconto de 10%
+#condição lógica
 if cupom == "NIVER10":
-    valor_da_compra = valor_da_compra * 0.9
-    print("O valor da compra com desconto é R${}".format(valor_da_compra))
+    #descontando os 10%
+    valor_final = valor_da_compra * 0.9
 else:
-    print("Como o cupom é inválido, o valor da compra é R${}".format(valor_da_compra))
+    valor_final = valor_da_compra
+    print("CUPOM INVÁLIDO")
+
+print("O valor total da compra é R${}".format(valor_final))
